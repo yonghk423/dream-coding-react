@@ -8,18 +8,19 @@ const Videos = () => {
     const {
             isLoading, 
             error, 
-            data:videos
-        } = useQuery(['videos', keyword], () => search(keyword));
+            data
+        }:any = useQuery(['videos', keyword], () => search(keyword));
+        console.log(data);
     return (
         <>
         <div>Videos {keyword ? `${keyword}` : '핫 트렌드'}</div>
         {isLoading && <p>Loading...</p>}
         {error && <p>Something is wrong</p>}
-        {videos && (
+        {data?.data && (
             <ul>
-                {videos.map((video:any) => (
-                    <VideoCard key={video.id} video={video} />
-                ))}
+               {data?.data?.items.map((ele:any) => (
+                <div>{ele?.snippet?.title}</div>
+               ))}
             </ul>
         )}
         </>
