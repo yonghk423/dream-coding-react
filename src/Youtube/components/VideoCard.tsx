@@ -1,9 +1,11 @@
 import React from 'react';
 
-const VideoCard = ({ video }:any) => {
-    console.log(video);
+const VideoCard = ({ data }:any) => {
+    console.log(data);
     return (
-        <div>{video.snippet.title}</div>
+        <li>
+            {data?.snippet?.title}
+        </li>
     )
 }
 

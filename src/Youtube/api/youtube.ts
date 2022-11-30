@@ -5,7 +5,7 @@ export async function search(keyword:string|undefined) {
         try {
             if(keyword) {
             const response = await axios
-            .get(`${baseURL}/search?${keyword}&maxResults=25&q=surfing&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+            .get(`${baseURL}/search?part=snippet&maxResults=25&q=${keyword}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
             return response;       
             } else {
             const response = await axios

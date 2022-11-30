@@ -18,9 +18,10 @@ const Videos = () => {
         {error && <p>Something is wrong</p>}
         {data?.data && (
             <ul>
-               {data?.data?.items.map((ele:any) => (
-                <div>{ele?.snippet?.title}</div>
-               ))}
+                {data?.data?.items?.map((ele:any, id:number) => 
+                (
+                    <VideoCard key={id}  data={ele}/>
+                ))}
             </ul>
         )}
         </>
