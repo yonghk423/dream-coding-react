@@ -8,9 +8,9 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-import NotFound from './pages/NotFound';
-import Videos from './pages/Videos';
-import VideoDetail from './pages/VideoDetail';
+import NotFound from './Youtube/pages/NotFound';
+import Videos from './Youtube/pages/Videos';
+import VideoDetail from './Youtube/pages/VideoDetail';
 
 const router = createBrowserRouter([
   {
