@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import AppTheme from './contextAPI/AppTheme';
+// import AppTheme from './contextAPI/AppTheme';
 import {
   createBrowserRouter,
   RouterProvider,

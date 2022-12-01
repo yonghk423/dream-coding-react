@@ -1,6 +1,13 @@
 import React from 'react';
+interface Data {
+    data: {
+        snippet: {
+            title: string;
+        }
+    }
+}
 
-const VideoCard = ({ data }:any) => {
+const VideoCard = ({ data }:Data) => {
     console.log(data);
     return (
         <li>
