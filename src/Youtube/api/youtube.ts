@@ -4,8 +4,15 @@ const baseURL = 'https://youtube.googleapis.com/youtube/v3'
 export interface VideosData {
     snippet : {
         title: string;
+        thumbnails: {
+                medium: {
+                    url:string;    
+                }
+            }
+        channelTitle:string;
+        publishedAt:string;    
+        }
     }
-}
 
 export async function search(keyword:string|undefined) {
         try {
